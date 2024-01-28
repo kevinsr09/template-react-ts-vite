@@ -22,7 +22,14 @@ module.exports = {
   plugins: ['react'],
   rules: {
     '@typescript-eslint/space-before-function-paren': 'off',
-    'react/react-in-jsx-scope': 'off'
+    'react/react-in-jsx-scope': 'off',
+    'react/self-closing-comp': [
+      'error',
+      {
+        component: true,
+        html: true
+      }
+    ]
   },
-  ignorePatterns: ['vite.config.ts']
+  ignorePatterns: ['vite.config.ts', 'tailwind.config.js']
 }
